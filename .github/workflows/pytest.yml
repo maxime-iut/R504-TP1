@@ -7,10 +7,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: get infos
-        run: echo "Repo name: ${{ github.repository }}"
-        run: echo "Branch name: ${{ github.ref }}"
-        run: echo "Runner name: ${{ runner.name }}"
-        run: echo "Runner OS: ${{ runner.os }} - ${{ runner.arch }}"
+        run: |
+          echo "Repo name: ${{ github.repository }}"
+          echo "Branch name: ${{ github.ref }}"
+          echo "Runner name: ${{ runner.name }}"
+          echo "Runner OS: ${{ runner.os }} - ${{ runner.arch }}"
   test-job:
     runs-on: ubuntu-latest
     name: Pytest passing tests
