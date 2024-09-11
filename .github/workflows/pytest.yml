@@ -15,3 +15,4 @@ jobs:
         uses: paolorechia/fast-pytest-github-action@develop
         with:
           pytest_args: 'test.py'
+          requirements_file: 'requirements.txt'
