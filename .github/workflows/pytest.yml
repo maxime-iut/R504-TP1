@@ -30,3 +30,5 @@ jobs:
         with:
           pytest_args: 'test.py'
           requirements_file: 'requirements.txt'
+      - name: Python version
+        run: python --version
