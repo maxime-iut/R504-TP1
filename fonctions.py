@@ -2,7 +2,10 @@
 
 
 def puissance(a, b):
-    if not type(a) is int or not type(b) is int:
+    try:
+        a = int(a)
+        b = int(b)
+    except ValueError as e:
         raise TypeError("Que des integer !!!")
 
     return a ** b
