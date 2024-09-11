@@ -1,6 +1,15 @@
 name: Pytest tests
 on: [push]
 jobs:
+  get-infos-job:
+    runs-on: ubuntu-latest
+    name: Get runner infos
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "Repo name: ${{ github.repository }}"
+      - run: echo "Branch name: ${{ github.ref }}"
+      - run: echo "Runner name: ${{ runner.name }}"
+      - run: echo "Runner OS: ${{ runner.os }} - ${{ runner.arch }}"
   test-job:
     runs-on: ubuntu-latest
     name: Pytest passing tests
